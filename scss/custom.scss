@@ -1,0 +1,22 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+$primary: #4a151b;
+
+
+
+$custom-colors: (
+  
+);
+
+
+// Merge the maps
+$theme-colors: (
+  $primary: #4a151b,
+    "secondary": #EB6C42,
+    "success": #198754,
+    "danger": #DA444C,
+    "info": #0F89CE,
+    "warning": #FD9238,
+    "light": #f8f9fa,
+    "dark": #5C4636
+
+);
