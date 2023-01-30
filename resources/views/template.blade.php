@@ -13,7 +13,7 @@
 
 <body>
     {{-- Navbar --}}
-    <nav class="navbar  bg-body-tertiary  mb-3">
+    <nav class="navbar navbar navbar-dark bg-body-terniary mb-3" style="background-color:#4a151b;">
         <div class="container-fluid">
             <a class="navbar-brand mb-0 h1" href="{{ route('index') }}">Poli-Waiter</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -23,20 +23,20 @@
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Poli-Waiter NB</h5>
+                    <h5 class="offcanvas-title" style="color: black" id="offcanvasNavbarLabel">Poli-Waiter NB</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{ route('menu') }}">Menú de
+                            <a class="nav-link active" style="color: black" aria-current="page" href="{{ route('menu') }}">Menú de
                                 alimentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Mi Cuenta</a>
+                            <a class="nav-link" href="#" style="color:rgb(196, 148, 3)">Mi Cuenta</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Cerrar Sesión</a>
+                            <a class="nav-link" href="#" style="color: black">Cerrar Sesión</a>
                         </li>
                     </ul>
                 </div>

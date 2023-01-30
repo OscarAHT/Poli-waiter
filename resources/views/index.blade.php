@@ -6,9 +6,8 @@
 @section('content')
     <div class="container justify-content-center mt-3">
         <div class="row">
-            <div class="column">
-                <h3>Lo más comprado</h3>
-
+            <div class="col">
+                <h3 class="row justify-content-md-center">Lo más comprado</h3>
                 {{-- Carrusel --}}
                 <div id="carouselExampleCaptions" class="carousel slide">
                     <div class="carousel-indicators">
@@ -24,7 +23,7 @@
                             <img src="{{ asset('imgs/enchiladas.jpg') }}" class="d-block w-100" alt="..."
                                 style="height: 450px;">
                             <div class="carousel-caption d-none d-md-block ">
-                                <h5>Enchiladas Verdes</h5>
+                                <h5 style="text-shadow: 1px 1px 2px black;">Enchiladas Verdes</h5>
                                 <button class="btn btn-success">Comprar</button>
                             </div>
                         </div>
@@ -32,7 +31,7 @@
                             <img src="{{ asset('imgs/tacos.jpg') }}" class="d-block w-100" alt="..."
                                 style="height: 450px">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Tacos de Bistec</h5>
+                                <h5 style="text-shadow: 1px 1px 2px black;">Tacos de Bistec</h5>
                                 <button class="btn btn-success">Comprar</button>
                             </div>
                         </div>
@@ -40,7 +39,7 @@
                             <img src="{{ asset('imgs/burrito.jpg') }}" class="d-block w-100" alt="..."
                                 style="height: 450px">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Burrito de Bistec</h5>
+                                <h5 style="text-shadow: 1px 1px 2px black;">Burrito de Bistec</h5>
                                 <button class="btn btn-success">Comprar</button>
                             </div>
                         </div>
@@ -57,8 +56,14 @@
                     </button>
                 </div>
             </div>
-
-
+        </div>
+        <div class="row mt-3">
+          <div class="col">
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consectetur quae velit hic dolorum, odit ratione non similique eaque sint!</h3>
+          </div>
+          <div class="col">
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ipsum ipsa ab velit enim magnam. Repellat fugiat aliquam sapiente doloribus.</h4>
+          </div>
         </div>
     </div>
 @stop

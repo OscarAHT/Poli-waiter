@@ -21,3 +21,10 @@ Route::get('/menu', function () {
     return view('menu');
 })->name('menu');
 
+
+
+// Alimentos
+Route::get('/agregarAlimento', function () {
+    return view('Alimentos/registrarComida');
+})->name('registrarComida');
+
