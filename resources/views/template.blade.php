@@ -1,19 +1,33 @@
+@extends('Alimentos.registrarComida')
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="{{ asset('/scss/custom.scss') }}">
+
+    <link rel="stylesheet" href="{{ asset('/css/styles.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Poli-Waiter | @yield('title') </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <style>
+      nav {
+        font-family: "Audiowide", sans-serif;
+      }
+      body{
+        font-family: "Roboto", sans-serif;
+        background-color: rgb(243, 241, 239)
+      }
+      </style>
+      
 </head>
 
 <body>
     {{-- Navbar --}}
-    <nav class="navbar navbar navbar-dark bg-body-terniary mb-3" style="background-color:#4a151b;">
+    <nav class="navbar navbar navbar-dark bg-body-terniary mb-3" style="background-color:#902a1d;">
         <div class="container-fluid">
             <a class="navbar-brand mb-0 h1" href="{{ route('index') }}">Poli-Waiter</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -29,14 +43,20 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" style="color: black" aria-current="page" href="{{ route('menu') }}">Menú de
+                            <a class="nav-link active" style="color: black" aria-current="page"
+                                href="{{ route('menu') }}">Menú de
                                 alimentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color:rgb(196, 148, 3)">Mi Cuenta</a>
+                         
+                          <a class="nav-link active" style="color: black" aria-current="page"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar nuevo alimento</a>
+                      </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color:black">Mi Cuenta</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: black">Cerrar Sesión</a>
+                            <a class="nav-link" href="#" style="color:rgb(196, 148, 3)">Cerrar Sesión</a>
                         </li>
                     </ul>
                 </div>
