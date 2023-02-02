@@ -24,23 +24,23 @@
                                 style="height: 450px;">
                             <div class="carousel-caption d-none d-md-block ">
                                 <h5 style="text-shadow: 1px 1px 2px black;">Enchiladas Verdes</h5>
-                                <button class="btn btn-success">Comprar</button>
+                                <a href="{{asset('comprarEnchiladas')}}"><button class="btn btn-success">Comprar</button></a>
                             </div>
                         </div>
                         <div class="carousel-item" style="width: 1100px">
                             <img src="{{ asset('imgs/tacos.jpg') }}" class="d-block w-100" alt="..."
                                 style="height: 450px">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5 style="text-shadow: 1px 1px 2px black;">Tacos de Bistec</h5>
-                                <button class="btn btn-success">Comprar</button>
+                                <h5 style="text-shadow: 1px 1px 2px black;">Tacos</h5>
+                                <a href="{{asset('comprarTacos')}}"><button class="btn btn-success">Comprar</button></a>
                             </div>
                         </div>
                         <div class="carousel-item" style="width: 1100px">
                             <img src="{{ asset('imgs/burrito.jpg') }}" class="d-block w-100" alt="..."
                                 style="height: 450px">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5 style="text-shadow: 1px 1px 2px black;">Burrito de Bistec</h5>
-                                <button class="btn btn-success">Comprar</button>
+                                <h5 style="text-shadow: 1px 1px 2px black;">Burritos</h5>
+                                <a href="{{asset('comprarBurritos')}}"><button class="btn btn-success">Comprar</button></a>
                             </div>
                         </div>
                     </div>

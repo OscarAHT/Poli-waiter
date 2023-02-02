@@ -1,6 +1,6 @@
 @extends('template')
 @section('title')
-    Menú
+    Menú Comidas
 @stop
 
 @section('content')

@@ -33,6 +33,17 @@ Route::get('/miCuenta', function () {
     return view('userAccount');
 })->name('miCuenta');
 
+Route::get('/comprarEnchiladas', function () {
+    return view('comprarEnchiladas');
+})->name('comprarEnchiladas');
+
+Route::get('/comprarTacos', function () {
+    return view('comprarTacos');
+})->name('comprarTacos');
+
+Route::get('/comprarBurritos', function () {
+    return view('comprarBurritos');
+})->name('comprarBurritos');
 
 
 
