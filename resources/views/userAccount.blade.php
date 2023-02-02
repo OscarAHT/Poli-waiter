@@ -10,7 +10,7 @@
         <div class="col">
             
             <p>Nombre de usuario: </p>
-            <p>Mis pedidos</p>
+            <a href="{{asset('status')}}" class="btn btn">Mis Pedidos</a>
         </div>
         <div class="col">
             <p>Nombre Completo: Carlos Alberto Matías Jiménez</p>

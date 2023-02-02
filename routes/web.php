@@ -45,6 +45,11 @@ Route::get('/comprarBurritos', function () {
     return view('comprarBurritos');
 })->name('comprarBurritos');
 
+Route::get('/status', function () {
+    return view('statusPedido');
+})->name('status');
+
+
 
 
 
