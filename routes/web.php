@@ -21,6 +21,16 @@ Route::get('/menu', function () {
     return view('menu');
 })->name('menu');
 
+Route::get('/menuBebidas', function () {
+    return view('menuBebidas');
+})->name('menuBebidas');
+
+Route::get('/menuSnacks', function () {
+    return view('menuSnacks');
+})->name('menuSnacks');
+
+
+
 
 
 // Alimentos
