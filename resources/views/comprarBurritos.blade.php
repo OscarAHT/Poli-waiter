@@ -16,25 +16,25 @@
                       <p>Burritos con arroz, frijoles y queso</p>
                       <h5>Relleno</h5>
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexCheckChecked1" >
                         <label class="form-check-label" for="flexCheckChecked">
                           Pollo
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexCheckChecked2" >
                         <label class="form-check-label" for="flexCheckChecked">
                           Milanesa
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexCheckChecked3" >
                         <label class="form-check-label" for="flexCheckChecked">
                           Bistec
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexCheckChecked4" >
                         <label class="form-check-label" for="flexCheckChecked">
                           Arrachera +$5
                         </label>

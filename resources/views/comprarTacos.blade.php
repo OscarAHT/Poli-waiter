@@ -16,19 +16,19 @@
                       <p>Tacos</p>
                       <h5>Carne</h5>
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexCheckChecked1" >
                         <label class="form-check-label" for="flexCheckChecked">
                           Bistec
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexCheckChecked2" >
                         <label class="form-check-label" for="flexCheckChecked">
                           Chorizo
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexCheckChecked3" >
                         <label class="form-check-label" for="flexCheckChecked">
                           Campechanos
                         </label>

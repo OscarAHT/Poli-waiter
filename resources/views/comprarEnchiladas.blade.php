@@ -16,13 +16,13 @@
                       <p>Enchiladas Verdes con queso, crema y cebolla</p>
                       <h5>Relleno</h5>
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexCheckChecked1" >
                         <label class="form-check-label" for="flexCheckChecked">
                           Pollo
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="" id="flexCheckChecked2" >
                         <label class="form-check-label" for="flexCheckChecked">
                           Queso
                         </label>
