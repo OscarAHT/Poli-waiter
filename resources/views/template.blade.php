@@ -53,7 +53,7 @@
                           data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar nuevo alimento</a>
                       </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color:black">Mi Cuenta</a>
+                            <a class="nav-link" href="{{asset('miCuenta')}}" style="color:black">Mi Cuenta</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" style="color:rgb(196, 148, 3)">Cerrar Sesión</a>

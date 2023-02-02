@@ -29,6 +29,11 @@ Route::get('/menuSnacks', function () {
     return view('menuSnacks');
 })->name('menuSnacks');
 
+Route::get('/miCuenta', function () {
+    return view('userAccount');
+})->name('miCuenta');
+
+
 
 
 
