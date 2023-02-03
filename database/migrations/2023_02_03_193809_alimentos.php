@@ -14,11 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('alimentos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('descripcion');
             $table->float('precioVenta');
-           
-            $table->foreign('tipoAlimento')->references('id')->on('tiposAlimentos'); 
+            //$table->integer('tipoAlimento')->unsigned();
+            $table->foreignId('tipoAlimentoId')->constrained('tiposAlimentos'); 
 
 
         });

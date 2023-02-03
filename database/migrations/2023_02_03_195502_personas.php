@@ -14,11 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('personas', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('nombre');
+            // $table->integer('tipoUsuario')->unsigned();
             $table->string('apellidoPaterno');
             $table->string('apellidoMaterno')->nullable();
-            $table->foreign('tipoUsuario')->references('id')->on('tiposUsuarios'); 
+            $table->foreignId('tipoUsuario')->constrained('tiposUsuarios'); 
+
+            // $table->foreign('tipoUsuario')->references('id')->on('tiposUsuarios'); 
         });
     }
 

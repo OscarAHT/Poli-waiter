@@ -14,8 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('detalle_alimentos-ingredientes', function (Blueprint $table) {
-            $table->foreign('idAlimentos')->references('id')->on('alimentos'); 
-            $table->foreign('idIngredientes')->references('id')->on('ingredientes'); 
+            $table->id()->unsigned();
+            // $table->integer('idIngredientes')->unsigned();
+            $table->foreignId('idAlimentos')->constrained('alimentos'); 
+            $table->foreignId('idIngredientes')->constrained('ingredientes'); 
+            
         });
     }
 

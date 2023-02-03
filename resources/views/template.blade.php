@@ -19,7 +19,7 @@
       }
       body{
         font-family: "Roboto", sans-serif;
-        background-color: rgb(243, 241, 239)
+        background-color: rgb(243, 241, 239);
       }
       </style>
       

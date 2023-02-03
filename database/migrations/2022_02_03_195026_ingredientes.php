@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ingredientes', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('descripcion');
             $table->boolean('disponibilidad');
             $table->boolean('ingredienteExtra');

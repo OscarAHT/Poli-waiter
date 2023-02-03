@@ -14,14 +14,17 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ventas', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->float('monto');
-            
+            // $table->integer('tipoDePago')->unsigned(); 
             $table->date('fecha');
             $table->integer('tipoUsuario');
-            
-            $table->integer('tipoDePago')->references('id')->on('tiposDePago');
-            $table->integer('empleado')->references('id')->on('personas');
+            // $table->integer('empleado')->unsigned();
+            $table->foreignId('tipoDePago')->constrained('tiposDePago'); 
+            $table->foreignId('empleado')->constrained('personas'); 
+
+            // $table->integer('tipoDePago')->references('id')->on('tiposDePago');
+            // $table->integer('empleado')->references('id')->on('personas');
         });
     }
 

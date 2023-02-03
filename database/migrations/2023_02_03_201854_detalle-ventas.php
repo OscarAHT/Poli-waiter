@@ -15,11 +15,15 @@ return new class extends Migration
     {
         Schema::create('detalle-ventas', function (Blueprint $table) {
            
-            
+            // $table->id()->unisgned();
+            // $table->integer('alimento')->unsigned();
             $table->integer('cantidad');
             $table->float('granTotal');
-            $table->integer('id')->references('id')->on('ventas');
-            $table->integer('alimento')->references('id')->on('alimentos');
+            $table->foreignId('id')->constrained('ventas'); 
+            $table->foreignId('alimento')->constrained('alimentos'); 
+
+            // $table->integer('id')->references('id')->on('ventas');
+            // $table->integer('alimento')->references('id')->on('alimentos');
         });
     }
 
