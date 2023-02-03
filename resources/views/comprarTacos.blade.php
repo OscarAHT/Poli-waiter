@@ -33,31 +33,10 @@
                           Campechanos
                         </label>
                       </div>
-                      <h5>Ingredientes Extra</h5>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                          Cilantro
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
-                        <label class="form-check-label" for="flexCheckChecked">
-                          Cebolla
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                          Salsa Verde
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
-                        <label class="form-check-label" for="flexCheckChecked">
-                          Salsa Roja
-                        </label>
-                      </div>
+                      
+                    <div class="input-group">
+                      <span class="input-group-text">Notas: </span>
+                      <textarea class="form-control" aria-label="With textarea"></textarea>
                     </div>
                     <div class="card-footer text-muted">
                         <a href="" class="btn btn" style="background-color: rgb(226, 134, 93); color:white">Agregar al carrito</a>
