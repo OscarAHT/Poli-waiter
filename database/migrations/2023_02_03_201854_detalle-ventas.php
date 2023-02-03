@@ -14,12 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('detalle-ventas', function (Blueprint $table) {
-            $table->int('id');
-            $table->int('alimento');
-            $table->int('cantidad');
+           
+            
+            $table->integer('cantidad');
             $table->float('granTotal');
-            $table->int('id')->references('id')->on('ventas');
-            $table->int('alimento')->references('id')->on('alimentos');
+            $table->integer('id')->references('id')->on('ventas');
+            $table->integer('alimento')->references('id')->on('alimentos');
         });
     }
 

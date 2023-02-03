@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('apellidoPaterno');
             $table->string('apellidoMaterno')->nullable();
-            $table->int('tipoUsuario');
             $table->foreign('tipoUsuario')->references('id')->on('tiposUsuarios'); 
         });
     }

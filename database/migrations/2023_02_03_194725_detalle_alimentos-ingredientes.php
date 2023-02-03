@@ -14,8 +14,6 @@ return new class extends Migration
     public function up()
     {
         Schema::create('detalle_alimentos-ingredientes', function (Blueprint $table) {
-            $table->int('idAlimentos');
-            $table->int('idIngredientes');
             $table->foreign('idAlimentos')->references('id')->on('alimentos'); 
             $table->foreign('idIngredientes')->references('id')->on('ingredientes'); 
         });

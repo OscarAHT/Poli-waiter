@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::create('ventas', function (Blueprint $table) {
             $table->increments('id');
             $table->float('monto');
-            $table->int('tipoDePago');
+            
             $table->date('fecha');
-            $table->int('tipoUsuario');
-            $table->int('empleado'); 
-            $table->int('tipoDePago')->references('id')->on('tiposDePago');
-            $table->int('empleado')->references('id')->on('personas');
+            $table->integer('tipoUsuario');
+            
+            $table->integer('tipoDePago')->references('id')->on('tiposDePago');
+            $table->integer('empleado')->references('id')->on('personas');
         });
     }
 

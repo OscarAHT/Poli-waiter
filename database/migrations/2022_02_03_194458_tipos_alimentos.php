@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('tiposAlimentos', function (Blueprint $table) {
             $table->increments('id');
-            $table->varchar('descripcion');
+            $table->string('descripcion');
 
         });
     }

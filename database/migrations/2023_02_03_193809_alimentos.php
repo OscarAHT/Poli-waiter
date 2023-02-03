@@ -17,7 +17,7 @@ return new class extends Migration
             $table->increments('id');
             $table->string('descripcion');
             $table->float('precioVenta');
-            $table->int('tipoAlimento');
+           
             $table->foreign('tipoAlimento')->references('id')->on('tiposAlimentos'); 
 
 
