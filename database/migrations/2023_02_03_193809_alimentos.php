@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('descripcion');
             $table->float('precioVenta');
             //$table->integer('tipoAlimento')->unsigned();
-            $table->foreignId('tipoAlimentoId')->constrained('tiposAlimentos'); 
+            $table->foreignId('tipoAlimento')->constrained('tiposAlimentos'); 
 
 
         });
