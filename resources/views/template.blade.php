@@ -56,7 +56,7 @@
                             <a class="nav-link" href="{{asset('miCuenta')}}" style="color:black">Mi Cuenta</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color:rgb(196, 148, 3)">Cerrar Sesión</a>
+                            <a class="nav-link" href="{{asset('login')}}" style="color:rgb(196, 148, 3)">Cerrar Sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -98,7 +98,7 @@
 
 
 
-
+    <script src="{{asset('js/toast.js')}}"> </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>

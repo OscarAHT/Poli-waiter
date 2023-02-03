@@ -22,10 +22,11 @@
           <!-- PASSWORD INPUT -->
           <label for="password">Contraseña: </label>
           <input type="password" placeholder="">
-          <input type="submit" value="Ingresar">
-          <a href="#">¿Olvidaste tu contraseña?</a>
+          
          
         </form>
+        <a href="/"><input type="submit" value="Ingresar"></a>
+          <a href="#">¿Olvidaste tu contraseña?</a>
       </div>
 
 </body>
