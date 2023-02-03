@@ -1,4 +1,5 @@
 @extends('Alimentos.registrarComida')
+@extends('Alimentos.registrarIngrediente')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,6 +53,12 @@
                           <a class="nav-link active" style="color: black" aria-current="page"
                           data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar nuevo alimento</a>
                       </li>
+                      <li class="nav-item">
+                         
+                        <a class="nav-link active" style="color: black" aria-current="page"
+                        data-bs-toggle="modal" data-bs-target="#ingredientesModal">Agregar nuevo ingrediente</a>
+                    </li>
+                      
                         <li class="nav-item">
                             <a class="nav-link" href="{{asset('miCuenta')}}" style="color:black">Mi Cuenta</a>
                         </li>
