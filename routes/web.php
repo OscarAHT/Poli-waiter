@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\controladorIngredientes;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,3 +64,5 @@ Route::get('/agregarAlimento', function () {
     return view('Alimentos/registrarComida');
 })->name('registrarComida');
 
+//Status
+Route::post('agregarIngrediente',[controladorIngredientes::class,'store'])->name('ingrediente.store');
