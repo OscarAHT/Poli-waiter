@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controladorIngredientes;
+use App\Http\Controllers\controladorAlimentos;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,9 +61,7 @@ Route::get('/status', function () {
 
 
 // Alimentos
-Route::get('/agregarAlimento', function () {
-    return view('Alimentos/registrarComida');
-})->name('registrarComida');
+Route::get('/agregarComida',[controladorAlimentos::class,'create'])->name('alimento.create');
 
 //Status
 Route::post('agregarIngrediente',[controladorIngredientes::class,'store'])->name('ingrediente.store');
