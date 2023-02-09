@@ -2,3 +2,12 @@ img{
     height: 200px;
     width: 250px;
 }
+
+#navItem  {
+    color: black;
+    transition: .2s;
+}
+
+#navItem:hover {
+    color:rgb(196, 148, 3)
+}

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\controladorIngredientes;
+use App\Http\Controllers\controladorAlimentos;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
 
 Route::get('/', function () {
     return view('index');
@@ -55,7 +61,7 @@ Route::get('/status', function () {
 
 
 // Alimentos
-Route::get('/agregarAlimento', function () {
-    return view('Alimentos/registrarComida');
-})->name('registrarComida');
+Route::get('/agregarComida',[controladorAlimentos::class,'create'])->name('alimento.create');
 
+//Status
+Route::post('agregarIngrediente',[controladorIngredientes::class,'store'])->name('ingrediente.store');

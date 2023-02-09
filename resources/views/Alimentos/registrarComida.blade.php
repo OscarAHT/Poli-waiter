@@ -1,31 +1,49 @@
+@extends('template')
+@section('title')
+    Agregar Alimento
+@stop
 
-<!-- Modal -->
-<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Alimento</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <div class="form">
-                <select class="form-select" aria-label="Default select example">
-                    <option selected disabled>Tipo de alimento: </option>
-                    <option value="1">Comida</option>
-                    <option value="2">Bebida</option>
-                    <option value="3">Snack</option>
-                  </select>
-                  <div class="input-group mt-2">
-                    <span class="input-group-text">Nombre:</span>
-                    <textarea class="form-control" aria-label="With textarea"></textarea>
+@section('content')
+    <div class="container d-flex justify-content-center">
+        <div class="card text-center">
+            <div class="card-header">Agregar Nuevo Alimento</div>
+            <div class="card-body">
+                <form action="">
+
+                    <select class="form-select" aria-label="Default select example" name="tipo">
+                        <option selected disabled>Tipo de alimento: </option>
+                        <option value="1">Comida</option>
+                        <option value="2">Bebida</option>
+                        <option value="3">Snack</option>
+                    </select>
+                    <div class="input-group mt-2">
+                        <span class="input-group-text">Nombre:</span>
+                        <textarea class="form-control" aria-label="With textarea" name="descripcion"></textarea>
+                    </div>
+
+                    @foreach ($consultaIngredientes as $ingredientes)
+                        <div class="form-check">
+
+
+                            <input class="form-check-input" type="checkbox" value="{{ $ingredientes->id }}"
+                                id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                {{ $ingredientes->descripcion }}
+                            </label>
+                        </div>
+                    @endforeach
+                    <div class="input-group mt-2 mb-2">
+                      <span class="input-group-text">Precio de Venta:</span>
+                      <textarea class="form-control" aria-label="With textarea" name="precioVenta"></textarea>
                   </div>
-                  
+
+                  <div class=" mt-2">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+                  </div>
+                    
+                </form>
             </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary">Agregar</button>
-        </div>
-      </div>
     </div>
-  </div>
+@stop

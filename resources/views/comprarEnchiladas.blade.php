@@ -54,10 +54,23 @@
                       </div>
                     </div>
                     <div class="card-footer text-muted">
-                        <a href="" class="btn btn" style="background-color: rgb(226, 134, 93); color:white">Agregar al carrito</a>
+                         <button type="button" class="btn btn" id="liveToastBtn" style="background-color: rgb(226, 134, 93); color:white">Agregar al carrito</button>
                     </div>
                   </div>
             </div>
         </div>
     </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <strong class="me-auto">PruebaToast1</strong>
+            <small></small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Se ha agregado el producto al carrito!
+          </div>
+        </div>
+      </div>
 @stop

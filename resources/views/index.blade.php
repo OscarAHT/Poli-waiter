@@ -18,9 +18,8 @@
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
                     </div>
-                  
-                    <div class="carousel-inner  justify-content-center">
-                        <div class="carousel-item active " style="width: 1300px">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" style="width: 1300px">
                             <img src="{{ asset('imgs/enchiladas.jpg') }}" class="d-block w-100" alt="..."
                                 style="height: 450px;">
                             <div class="carousel-caption d-none d-md-block ">

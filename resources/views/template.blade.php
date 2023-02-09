@@ -1,4 +1,4 @@
-@extends('Alimentos.registrarComida')
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,15 +14,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <style>
-      nav {
-        font-family: "Audiowide", sans-serif;
-      }
-      body{
-        font-family: "Roboto", sans-serif;
-        background-color: rgb(243, 241, 239)
-      }
-      </style>
-      
+        nav {
+            font-family: "Audiowide", sans-serif;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: rgb(243, 241, 239);
+        }
+    </style>
+
 </head>
 
 <body>
@@ -42,25 +43,31 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" style="color: black" aria-current="page"
-                                href="{{ route('menu') }}">Menú de
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="{{route('menu')}}" style="color:black" id="navItem">Menú de
                                 alimentos</a>
                         </li>
-                        <li class="nav-item">
-                         
-                          <a class="nav-link active" style="color: black" aria-current="page"
-                          data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar nuevo alimento</a>
-                      </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{asset('miCuenta')}}" style="color:black">Mi Cuenta</a>
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="{{ route('alimento.create') }}" style="color:black" id="navItem">Agregar
+                                Alimento</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color:rgb(196, 148, 3)">Cerrar Sesión</a>
+
+                            <a class="nav-link active" style="color: black" aria-current="page" data-bs-toggle="modal"
+                                data-bs-target="#ingredientesModal" id="navItem">Agregar nuevo ingrediente</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('miCuenta') }}" style="color:black" id="navItem">Mi Cuenta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}" style="color:rgb(196, 148, 3)">Cerrar
+                                Sesión</a>
                         </li>
                     </ul>
                 </div>
             </div>
+
         </div>
     </nav>
 
@@ -97,8 +104,9 @@
 
 
 
-
-
+    
+    @extends('Alimentos.registrarIngrediente')
+    <script src="{{ asset('js/toast.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>
