@@ -19,7 +19,7 @@
                             aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active" style="width: 1100px">
+                        <div class="carousel-item active" style="width: 1300px">
                             <img src="{{ asset('imgs/enchiladas.jpg') }}" class="d-block w-100" alt="..."
                                 style="height: 450px;">
                             <div class="carousel-caption d-none d-md-block ">
@@ -27,7 +27,7 @@
                                 <a href="{{asset('comprarEnchiladas')}}"><button class="btn btn-success">Comprar</button></a>
                             </div>
                         </div>
-                        <div class="carousel-item" style="width: 1100px">
+                        <div class="carousel-item" style="width: 1300px">
                             <img src="{{ asset('imgs/tacos.jpg') }}" class="d-block w-100" alt="..."
                                 style="height: 450px">
                             <div class="carousel-caption d-none d-md-block">
@@ -35,7 +35,7 @@
                                 <a href="{{asset('comprarTacos')}}"><button class="btn btn-success">Comprar</button></a>
                             </div>
                         </div>
-                        <div class="carousel-item" style="width: 1100px">
+                        <div class="carousel-item" style="width: 1300px">
                             <img src="{{ asset('imgs/burrito.jpg') }}" class="d-block w-100" alt="..."
                                 style="height: 450px">
                             <div class="carousel-caption d-none d-md-block">
