@@ -43,7 +43,7 @@ class controladorIngredientes extends Controller
            
         ]);
 
-        return redirect('/');
+        return redirect('/')->with('ingredienteAgregado','confirmarIngrediente');
     }
 
     /**
