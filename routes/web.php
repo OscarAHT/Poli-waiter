@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controladorIngredientes;
 use App\Http\Controllers\controladorAlimentos;
+use App\Http\Controllers\controladorApp;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,9 +56,14 @@ Route::get('/status', function () {
     return view('statusPedido');
 })->name('status');
 
+Route::get('/ajustes', function () {
+    return view('ajustes');
+})->name('ajustes');
 
 
 
+// Ajustes
+Route::get('/ajustes/ingredientes',[controladorApp::class,'index'])->name('ajustes');
 
 
 // Alimentos

@@ -20,7 +20,7 @@
                         <span class="input-group-text">Nombre:</span>
                         <textarea class="form-control" aria-label="With textarea" name="descripcion"></textarea>
                     </div>
-
+                    
                     @foreach ($consultaIngredientes as $ingredientes)
                         <div class="form-check">
 

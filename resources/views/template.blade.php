@@ -56,11 +56,11 @@
                             <a class="nav-link active" href="{{ route('alimento.create') }}" style="color:black" id="navItem">Agregar
                                 Alimento</a>
                         </li>
-                        <li class="nav-item">
-
-                            <a class="nav-link active" style="color: black" aria-current="page" data-bs-toggle="modal"
-                                data-bs-target="#ingredientesModal" id="navItem">Agregar nuevo ingrediente</a>
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="{{ route('ajustes') }}" style="color:black" id="navItem">
+                                Ajustes</a>
                         </li>
+                   
 
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('miCuenta') }}" style="color:black" id="navItem">Mi Cuenta</a>
