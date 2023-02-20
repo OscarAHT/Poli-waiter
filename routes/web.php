@@ -56,14 +56,13 @@ Route::get('/status', function () {
     return view('statusPedido');
 })->name('status');
 
-Route::get('/ajustes', function () {
-    return view('ajustes');
-})->name('ajustes');
+
 
 
 
 // Ajustes
-Route::get('/ajustes/ingredientes',[controladorApp::class,'index'])->name('ajustes');
+Route::get('/ajustes/ingredientes',[controladorApp::class,'indexIngredientes'])->name('ajustesIngredientes');
+Route::get('/ajustes/alimentos',[controladorApp::class,'indexAlimentos'])->name('ajustesAlimentos');
 
 
 // Alimentos

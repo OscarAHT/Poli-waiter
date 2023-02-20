@@ -12,9 +12,21 @@ class controladorApp extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function indexIngredientes()
     {
-        $consultaIngredientes = DB::table('ingredientes')->get();
+        $consultaIngredientes = DB::table('ingredientes')->orderBy('descripcion')->get();
+        return view('ajustesIngredientes', compact('consultaIngredientes'));
+
+    }
+    public function indexAlimentos()
+    {
+        $consultaAlimentos = DB::table('alimentos')->orderBy('descripcion')->get();
+        return view('ajustesAlimentos', compact('consultaAlimentos'));
+
+    }
+    public function indexBebidas()
+    {
+        $consultaBebidas = DB::table('bebidas')->get();
         return view('ajustes', compact('consultaIngredientes'));
 
     }

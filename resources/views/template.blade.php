@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/82fb3aa6c0.css" crossorigin="anonymous">
     <script src="sweetalert2.all.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('js/toast.js') }}"></script>
@@ -57,7 +58,7 @@
                                 Alimento</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link active" href="{{ route('ajustes') }}" style="color:black" id="navItem">
+                            <a class="nav-link active" href="{{ route('ajustesIngredientes') }}" style="color:black" id="navItem">
                                 Ajustes</a>
                         </li>
                    
