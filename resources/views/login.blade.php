@@ -22,9 +22,10 @@
           <!-- PASSWORD INPUT -->
               <label for="password">Contraseña: </label>
               <input type="password" placeholder="">
-          
-            <a href="/"><input type="submit" value="Ingresar"></a>
-            <a href="#">¿Olvidaste tu contraseña?</a>
+              <button type="button" class="btn btn-dribbble text-left w-100 mb-3">
+                <i class="ion-logo-dribbble mr-2"></i> Find us on Dribbble
+                </button>
+                
          
         </form>
       </div>

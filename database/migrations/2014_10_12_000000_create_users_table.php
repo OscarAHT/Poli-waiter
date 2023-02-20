@@ -17,6 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('nombre');
+            // $table->integer('tipoUsuario')->unsigned();
+            $table->string('apellidoPaterno');
+            $table->string('apellidoMaterno')->nullable();
+            $table->foreignId('tipoUsuario')->constrained('tiposUsuarios'); 
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

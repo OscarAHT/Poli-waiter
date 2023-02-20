@@ -18,10 +18,10 @@ return new class extends Migration
             $table->float('monto');
             // $table->integer('tipoDePago')->unsigned(); 
             $table->date('fecha');
-            $table->integer('tipoUsuario');
+           // $table->integer('tipoUsuario');
             // $table->integer('empleado')->unsigned();
             $table->foreignId('tipoDePago')->constrained('tiposDePago'); 
-            $table->foreignId('empleado')->constrained('personas'); 
+            $table->foreignId('empleado')->constrained('users'); 
 
             // $table->integer('tipoDePago')->references('id')->on('tiposDePago');
             // $table->integer('empleado')->references('id')->on('personas');

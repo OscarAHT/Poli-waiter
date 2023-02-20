@@ -10,5 +10,10 @@ class Ventas extends Model
     use HasFactory;
     
     protected $table ='ventas';
-    
+    public function Empleado(){
+
+    }
+    public function TipoPago(){
+
+    }
 }

@@ -64,6 +64,7 @@
                             <a class="nav-link" href="{{ route('login') }}" style="color:rgb(196, 148, 3)">Cerrar
                                 Sesión</a>
                         </li>
+                        
                     </ul>
                 </div>
             </div>
