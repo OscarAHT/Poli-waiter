@@ -4,6 +4,41 @@
 @stop
 
 @section('content')
+{{-- Sweet Alert  --}}
+@if (session()->has('actualizacion'))
+        {!! "<script>
+            Swal.fire({
+            icon: 'success',
+            title: 'Correcto!',
+            text: '¡Se ha actualizado el ingrediente!',
+        
+})
+            </script>" !!}
+@endif
+
+@if (session()->has('creacion'))
+        {!! "<script>
+            Swal.fire({
+            icon: 'success',
+            title: 'Correcto!',
+            text: '¡Se ha agregado un nuevo ingrediente!',
+        
+})
+            </script>" !!}
+@endif
+
+@if (session()->has('eliminacion'))
+        {!! "<script>
+            Swal.fire({
+            icon: 'success',
+            title: 'Correcto!',
+            text: '¡Se ha eliminado el ingrediente!',
+        
+})
+            </script>" !!}
+@endif
+
+
     <div class="container d-flex justify-content-center">
         <div class="row mt-2">
             <ul class="nav justify-content-center">
@@ -58,11 +93,15 @@
                     
                     <td>${{$ingrediente->precioVenta}}</td>
                     <td><div class="btn-group" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btn-outline-warning">Actualizar</button>
+                        <a href="{{route('ingredientes.edit', $ingrediente->id)}}" type="button" class="btn btn-outline-warning">Actualizar</a>
+                         
                         
-                        <button type="button" class="btn btn-outline-danger">Eliminar</button>
+                        <a href="{{route('ingredientes.destroy', $ingrediente->id)}}" type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarIngrediente{{$ingrediente->id}}"> Eliminar Ingrediente </a>
+                      
+                        
                       </div></td>
                   </tr>
+                  @include('Alimentos.eliminarIngrediente')
                 @endforeach
                  
                 </tbody>
@@ -70,6 +109,6 @@
         </div>
         
     </div>
-
+  
     @extends('Alimentos.registrarIngrediente')
 @stop

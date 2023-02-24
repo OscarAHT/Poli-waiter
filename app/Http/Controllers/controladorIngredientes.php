@@ -8,13 +8,14 @@ use DB;
 class controladorIngredientes extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Mostrar tabla ingredientes.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        $consultaIngredientes = DB::table('ingredientes')->orderBy('descripcion')->get();
+        return view('ajustesIngredientes', compact('consultaIngredientes'));
     }
 
     /**
@@ -43,19 +44,9 @@ class controladorIngredientes extends Controller
            
         ]);
 
-        return redirect('/')->with('ingredienteAgregado','confirmarIngrediente');
+        return redirect('/ajustes/ingredientes')->with('creacion','confirmarNuevoIngrediente');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -65,7 +56,8 @@ class controladorIngredientes extends Controller
      */
     public function edit($id)
     {
-        //
+        $consultaIngredientes = DB::table('ingredientes')->where('id',$id)->first();
+        return view('Alimentos.editarIngrediente',compact('consultaIngredientes'));
     }
 
     /**
@@ -77,8 +69,28 @@ class controladorIngredientes extends Controller
      */
     public function update(Request $request, $id)
     {
+        DB::table('ingredientes')->where('id',$id)->update([
+            "descripcion" => $request->input('descripcion'),
+            "disponibilidad" => $request->input('disponible'),
+            "ingredienteExtra" => $request->input('ingredienteExtra'),
+            "precioVenta" => $request->input('precioVenta'),
+        ]);
+
+        return redirect('/ajustes/ingredientes')->with('actualizacion','confirmarIngrediente');
+    }
+
+
+     /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
         //
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -88,6 +100,8 @@ class controladorIngredientes extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('ingredientes')->where('id',$id)->delete();
+
+        return redirect('/ajustes/ingredientes')->with('eliminacion','eliminarIngrediente');
     }
 }

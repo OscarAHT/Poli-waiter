@@ -14,7 +14,8 @@ class controladorAlimentos extends Controller
      */
     public function index()
     {
-        
+        $consultaAlimentos = DB::table('alimentos')->orderBy('descripcion')->get();
+        return view('ajustesAlimentos', compact('consultaAlimentos'));
     }
 
     /**

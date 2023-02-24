@@ -58,11 +58,18 @@ Route::get('/status', function () {
 
 
 
-
+//Ingredientes
+//show
+Route::get('/ajustes/ingredientes',[controladorIngredientes::class,'index'])->name('ajustesIngredientes');
+//Edit
+Route::get('ingredientes/editar/{id}',[controladorIngredientes::class,'edit'])->name('ingredientes.edit');
+//Update
+Route::put('ingredientes/actualizar/{id}',[controladorIngredientes::class,'update'])->name('ingredientes.update');
+//Delete
+Route::delete('ingredientes/eliminar/{id}',[controladorIngredientes::class,'destroy'])->name('ingredientes.destroy');
 
 // Ajustes
-Route::get('/ajustes/ingredientes',[controladorApp::class,'indexIngredientes'])->name('ajustesIngredientes');
-Route::get('/ajustes/alimentos',[controladorApp::class,'indexAlimentos'])->name('ajustesAlimentos');
+Route::get('/ajustes/alimentos',[controladorAlimentos::class,'index'])->name('ajustesAlimentos');
 
 
 // Alimentos

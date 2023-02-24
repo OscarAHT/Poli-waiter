@@ -53,10 +53,7 @@
                             <a class="nav-link active" href="{{route('menu')}}" style="color:black" id="navItem">Menú de
                                 alimentos</a>
                         </li>
-                        <li class="nav-item ">
-                            <a class="nav-link active" href="{{ route('alimento.create') }}" style="color:black" id="navItem">Agregar
-                                Alimento</a>
-                        </li>
+                      
                         <li class="nav-item ">
                             <a class="nav-link active" href="{{ route('ajustesIngredientes') }}" style="color:black" id="navItem">
                                 Ajustes</a>
