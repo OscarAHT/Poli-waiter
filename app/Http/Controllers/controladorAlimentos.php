@@ -12,10 +12,11 @@ class controladorAlimentos extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $consultaAlimentos = DB::table('alimentos')->orderBy('descripcion')->get();
-        return view('ajustesAlimentos', compact('consultaAlimentos'));
+        $filtrar = $request->get('filtrar');
+        $consultaAlimentos = DB::table('alimentos')->where('descripcion','like','%'.$filtrar.'%')->orderBy('descripcion')->get();
+        return view('ajustesAlimentos', compact('consultaAlimentos', 'filtrar'));
     }
 
     /**

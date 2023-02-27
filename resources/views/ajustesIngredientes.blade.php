@@ -64,9 +64,9 @@
         <a href="" type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#agregarIngrediente"> Agregar Ingrediente </a>
 
        {{-- Barra búsqueda --}}
-       <form class="d-flex float-right" role="search">
+       <form class="d-flex float-right mt-3" role="search">
         <input class="form-control me-2" type="search" placeholder="Filtrar" aria-label="Search" name="filtrar" value="{{$filtrar}}">
-        <button class="btn btn-light" type="submit">Filtrar</button>
+        <button class="btn btn-primary" type="submit">Filtrar</button>
       </form>
 
             {{-- Tabla ingredientes --}}
