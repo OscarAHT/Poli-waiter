@@ -5,18 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 
-class controladorAlimentos extends Controller
+class controladorApp extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $consultaAlimentos = DB::table('alimentos')->orderBy('descripcion')->get();
-        return view('ajustesAlimentos', compact('consultaAlimentos'));
-    }
+  
+    
+  
 
     /**
      * Show the form for creating a new resource.
@@ -25,8 +23,7 @@ class controladorAlimentos extends Controller
      */
     public function create()
     {
-        $consultaIngredientes = DB::table('ingredientes')->get();
-        return view('Alimentos.registrarComida', compact('consultaIngredientes'));
+        //
     }
 
     /**

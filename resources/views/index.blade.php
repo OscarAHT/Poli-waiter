@@ -4,6 +4,20 @@
 @stop
 
 @section('content')
+{{-- Alerta Ingrediente_agregado --}}
+@if (session()->has('ingredienteAgregado'))
+        {!! "<script>
+            Swal.fire({
+            icon: 'success',
+            title: 'Correcto!',
+            text: '¡Se ha agregado el ingrediente!',
+        
+})
+            </script>" !!}
+@endif
+
+
+
     <div class="container justify-content-center mt-3">
         <div class="row">
             <div class="col">
@@ -66,4 +80,7 @@
           </div>
         </div>
     </div>
+
+    
+        
 @stop

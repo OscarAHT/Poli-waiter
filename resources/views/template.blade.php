@@ -3,7 +3,13 @@
 <html lang="en">
 
 <head>
-
+    <link rel="stylesheet" href="https://kit.fontawesome.com/82fb3aa6c0.css" crossorigin="anonymous">
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('js/toast.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
     <link rel="stylesheet" href="{{ asset('/css/styles.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -47,15 +53,12 @@
                             <a class="nav-link active" href="{{route('menu')}}" style="color:black" id="navItem">Menú de
                                 alimentos</a>
                         </li>
+                      
                         <li class="nav-item ">
-                            <a class="nav-link active" href="{{ route('alimento.create') }}" style="color:black" id="navItem">Agregar
-                                Alimento</a>
+                            <a class="nav-link active" href="{{ route('ajustesIngredientes') }}" style="color:black" id="navItem">
+                                Ajustes</a>
                         </li>
-                        <li class="nav-item">
-
-                            <a class="nav-link active" style="color: black" aria-current="page" data-bs-toggle="modal"
-                                data-bs-target="#ingredientesModal" id="navItem">Agregar nuevo ingrediente</a>
-                        </li>
+                   
 
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('miCuenta') }}" style="color:black" id="navItem">Mi Cuenta</a>
@@ -107,10 +110,7 @@
 
     
     @extends('Alimentos.registrarIngrediente')
-    <script src="{{ asset('js/toast.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
+    
 </body>
 
 </html>

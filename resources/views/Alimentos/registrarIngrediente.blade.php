@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade " id="ingredientesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade " id="agregarIngrediente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -47,7 +47,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="submit" class="btn btn-primary">Agregar</button>
+                <button type="submit" class="btn btn-primary" id="liveToastBtn">Agregar</button>
             </div>
             </form>
         </div>
