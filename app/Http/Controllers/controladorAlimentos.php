@@ -25,7 +25,7 @@ class controladorAlimentos extends Controller
      */
     public function create()
     {
-        $consultaIngredientes = DB::table('ingredientes')->get();
+        $consultaIngredientes = DB::table('ingredientes')->orderBy('descripcion')->get();
         return view('Alimentos.registrarComida', compact('consultaIngredientes'));
     }
 

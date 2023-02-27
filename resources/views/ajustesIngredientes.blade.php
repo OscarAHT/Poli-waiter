@@ -63,7 +63,11 @@
          
         <a href="" type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#agregarIngrediente"> Agregar Ingrediente </a>
 
-       
+       {{-- Barra búsqueda --}}
+       <form class="d-flex float-right" role="search">
+        <input class="form-control me-2" type="search" placeholder="Filtrar" aria-label="Search" name="filtrar" value="{{$filtrar}}">
+        <button class="btn btn-light" type="submit">Filtrar</button>
+      </form>
 
             {{-- Tabla ingredientes --}}
             <table class="table">
@@ -73,7 +77,7 @@
                     <th scope="col">Disponibilidad</th>
                     <th scope="col">Ingrediente Extra</th>
                     <th scope="col">Precio de venta</th>
-                    <th scope="col">Acciones </th>
+                    <th scope="col"> </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -86,9 +90,9 @@
                         <td style="color:red">No Disponible</td>
                     @endif
                     @if ($ingrediente->ingredienteExtra==1)
-                        <td>Si</td>
+                        <td style="color:green">Si</td>
                     @else
-                        <td>No</td>
+                        <td style="color:red">No</td>
                     @endif
                     
                     <td>${{$ingrediente->precioVenta}}</td>

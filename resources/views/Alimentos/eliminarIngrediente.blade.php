@@ -18,7 +18,7 @@
             <form action="{{ route('ingredientes.destroy', $ingrediente->id) }}" method="POST">
                 <input type="hidden" name="_method" value="delete" />
                 @csrf
-                {!!method_field('DELETE')!!}
+                @method('delete')
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
                     <button type="submit" class="btn btn-danger">Eliminar</button>

@@ -71,13 +71,14 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-3">
-          <div class="col">
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consectetur quae velit hic dolorum, odit ratione non similique eaque sint!</h3>
+        <div class="row mt-5" style="background-color:#FFD485; opacity:0.5" >
+            
+          <div class="col-3">
+            <img src="/imgs/fruta.png" alt="Frutas" class="mt-2" style="height: 180px;">
           </div>
-          <div class="col">
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ipsum ipsa ab velit enim magnam. Repellat fugiat aliquam sapiente doloribus.</h4>
-          </div>
+          <div class="col mt-4">
+            <h3>¿Sabías qué...?</h3>
+<h4>La desnutrición no solo refleja problemas de hambruna, sino también malos hábitos nutricionales, los cuales pueden afectar a los estudiantes al consumir alimentos “chatarra” en la escuela, en mayor medida cuando no han desayunado antes de ir a la escuela. </h4>          </div>
         </div>
     </div>
 
