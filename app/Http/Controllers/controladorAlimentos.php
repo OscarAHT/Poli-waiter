@@ -99,6 +99,8 @@ class controladorAlimentos extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('alimentos')->where('id',$id)->delete();
+
+        return redirect('/ajustes/alimentos')->with('eliminacion','eliminarIngrediente');
     }
 }

@@ -19,7 +19,17 @@
             Swal.fire({
             icon: 'success',
             title: 'Correcto!',
-            text: '¡Se ha actualizado un  alimento!',
+            text: '¡Se ha actualizado un alimento!',
+        
+})
+            </script>" !!}
+@endif
+@if (session()->has('eliminacion'))
+        {!! "<script>
+            Swal.fire({
+            icon: 'success',
+            title: 'Correcto!',
+            text: '¡Se ha eliminado un alimento!',
         
 })
             </script>" !!}
@@ -84,11 +94,13 @@
                                     <a href="{{route('alimento.edit', $Alimento->id)}}" class="btn btn-outline-warning" type="button">Actualizar</a>
                                     
 
-                                    <button type="button" class="btn btn-outline-danger">Eliminar</button>
+                                    <a href="{{route('alimento.destroy', $Alimento->id)}}" type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarAlimento{{$Alimento->id}}"> Eliminar Ingrediente </a>
+
                                 </div>
                             </td>
 
                         </tr>
+                        @include('Alimentos.eliminarAlimento')
                     @endforeach
 
                 </tbody>

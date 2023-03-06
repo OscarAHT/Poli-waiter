@@ -11,6 +11,7 @@
                 <form action="{{route('alimento.update', $consultaAlimentos->id)}}" method="post">   
                     @csrf
                     @method('put')
+                    <input type="hidden" name="tipo" value="{{$consultaAlimentos->tipoAlimento}}" />
                     <select class="form-select" aria-label="Default select example" name="tipo">
                         <option selected disabled>Tipo de alimento: </option>
                         <option value="1">Comida</option>

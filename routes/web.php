@@ -85,3 +85,5 @@ Route::post('agregarAlimento',[controladorAlimentos::class,'store'])->name('alim
 Route::get('alimentos/editar/{id}',[controladorAlimentos::class,'edit'])->name('alimento.edit');
 //Update
 Route::put('alimentos/actualizar/{id}',[controladorAlimentos::class,'update'])->name('alimento.update');
+//Delete
+Route::delete('alimentos/eliminar/{id}',[controladorAlimentos::class,'destroy'])->name('alimento.destroy');
