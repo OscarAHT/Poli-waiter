@@ -81,3 +81,7 @@ Route::get('/ajustes/alimentos',[controladorAlimentos::class,'index'])->name('aj
 Route::get('/agregarAlimento',[controladorAlimentos::class,'create'])->name('alimento.create');
 //Store
 Route::post('agregarAlimento',[controladorAlimentos::class,'store'])->name('alimento.store');
+//Edit
+Route::get('alimentos/editar/{id}',[controladorAlimentos::class,'edit'])->name('alimento.edit');
+//Update
+Route::put('alimentos/actualizar/{id}',[controladorAlimentos::class,'update'])->name('alimento.update');

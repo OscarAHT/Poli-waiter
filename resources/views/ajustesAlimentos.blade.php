@@ -14,6 +14,16 @@
 })
             </script>" !!}
 @endif
+@if (session()->has('actualizacion'))
+        {!! "<script>
+            Swal.fire({
+            icon: 'success',
+            title: 'Correcto!',
+            text: '¡Se ha actualizado un  alimento!',
+        
+})
+            </script>" !!}
+@endif
 
 
     <div class="container d-flex justify-content-center">
@@ -47,6 +57,7 @@
             <table class="table">
                 <thead>
                     <tr>
+                        <th scope="col">Id</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Precio de Venta</th>
                         <th scope="col">Tipo de Alimento</th>
@@ -55,6 +66,7 @@
                 <tbody>
                     @foreach ($consultaAlimentos as $Alimento)
                         <tr>
+                            <td>{{$Alimento->id}}</td>
                             <td>{{ $Alimento->descripcion }}</td>
                             <td>${{ $Alimento->precioVenta }}</td>
                             @if ($Alimento->tipoAlimento == 1)
@@ -68,7 +80,9 @@
                             @endif
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic outlined example">
-                                    <button type="button" class="btn btn-outline-warning">Actualizar</button>
+                                    
+                                    <a href="{{route('alimento.edit', $Alimento->id)}}" class="btn btn-outline-warning" type="button">Actualizar</a>
+                                    
 
                                     <button type="button" class="btn btn-outline-danger">Eliminar</button>
                                 </div>
