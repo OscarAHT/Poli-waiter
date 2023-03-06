@@ -61,6 +61,8 @@ Route::get('/status', function () {
 //Ingredientes
 //show
 Route::get('/ajustes/ingredientes',[controladorIngredientes::class,'index'])->name('ajustesIngredientes');
+//Store
+Route::post('agregarIngrediente',[controladorIngredientes::class,'store'])->name('ingrediente.store');
 //Edit
 Route::get('ingredientes/editar/{id}',[controladorIngredientes::class,'edit'])->name('ingredientes.edit');
 //Update
@@ -69,11 +71,13 @@ Route::put('ingredientes/actualizar/{id}',[controladorIngredientes::class,'updat
 Route::delete('ingredientes/eliminar/{id}',[controladorIngredientes::class,'destroy'])->name('ingredientes.destroy');
 
 // Ajustes
-Route::get('/ajustes/alimentos',[controladorAlimentos::class,'index'])->name('ajustesAlimentos');
+
 
 
 // Alimentos
-Route::get('/agregarComida',[controladorAlimentos::class,'create'])->name('alimento.create');
-
-//Status
-Route::post('agregarIngrediente',[controladorIngredientes::class,'store'])->name('ingrediente.store');
+//show
+Route::get('/ajustes/alimentos',[controladorAlimentos::class,'index'])->name('ajustesAlimentos');
+//Create
+Route::get('/agregarAlimento',[controladorAlimentos::class,'create'])->name('alimento.create');
+//Store
+Route::post('agregarAlimento',[controladorAlimentos::class,'store'])->name('alimento.store');

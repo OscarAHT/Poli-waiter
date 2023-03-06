@@ -38,7 +38,15 @@ class controladorAlimentos extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::table('alimentos')->insert([
+            "descripcion" => $request->input('descripcion'),
+            "precioVenta" => $request->input('precioVenta'),
+            "imagen" => $request->input('imagen'),
+            "tipoAlimento" => $request->input('tipo')
+           
+        ]);
+
+        return redirect('/ajustes/alimentos')->with('creacion','confirmarNuevoIngrediente');
     }
 
     /**

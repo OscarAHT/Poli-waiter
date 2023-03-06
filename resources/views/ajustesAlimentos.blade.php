@@ -4,6 +4,18 @@
 @stop
 
 @section('content')
+@if (session()->has('creacion'))
+        {!! "<script>
+            Swal.fire({
+            icon: 'success',
+            title: 'Correcto!',
+            text: '¡Se ha agregado un nuevo alimento!',
+        
+})
+            </script>" !!}
+@endif
+
+
     <div class="container d-flex justify-content-center">
         <div class="row mt-2">
             <ul class="nav justify-content-center">
@@ -45,13 +57,13 @@
                         <tr>
                             <td>{{ $Alimento->descripcion }}</td>
                             <td>${{ $Alimento->precioVenta }}</td>
-                            @if ($Alimento->tipoAlimentoId == 1)
+                            @if ($Alimento->tipoAlimento == 1)
                                 <td class="" style="color:">Comida</td>
                             @endif
-                            @if ($Alimento->tipoAlimentoId == 2)
+                            @if ($Alimento->tipoAlimento == 2)
                                 <td class="" style="color:">Bebida</td>
                             @endif
-                            @if ($Alimento->tipoAlimentoId == 3)
+                            @if ($Alimento->tipoAlimento == 3)
                                 <td class="" style="color:">Snack</td>
                             @endif
                             <td>

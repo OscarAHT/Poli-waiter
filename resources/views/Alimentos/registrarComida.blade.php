@@ -8,8 +8,8 @@
         <div class="card text-center">
             <div class="card-header">Agregar Nuevo Alimento</div>
             <div class="card-body">
-                <form action="">
-
+                <form action="{{route('alimento.store')}}" method="post">   
+                    @csrf
                     <select class="form-select" aria-label="Default select example" name="tipo">
                         <option selected disabled>Tipo de alimento: </option>
                         <option value="1">Comida</option>
@@ -32,6 +32,10 @@
                             </label>
                         </div>
                     @endforeach
+                    <div class="input-group mt-2">
+                        <span class="input-group-text">Imagen:</span>
+                        <textarea class="form-control" aria-label="With textarea" name="imagen"></textarea>
+                    </div>
                     <div class="input-group mt-2 mb-2">
                       <span class="input-group-text">Precio de Venta:</span>
                       <textarea class="form-control" aria-label="With textarea" name="precioVenta"></textarea>
