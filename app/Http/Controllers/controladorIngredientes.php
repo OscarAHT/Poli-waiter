@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\validadoringrediente;
 use DB;
+use Carbon\Carbon;
 
 class controladorIngredientes extends Controller
 {
@@ -35,7 +37,7 @@ class controladorIngredientes extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(validadoringrediente $request)
     {
         DB::table('ingredientes')->insert([
             "descripcion" => $request->input('descripcion'),
