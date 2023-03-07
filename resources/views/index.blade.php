@@ -4,12 +4,16 @@
 @stop
 
 @section('content')
-<div class="container" style="b">
-
-</div>
 
 
 
+
+  
+        <div  style="background-image:url({{asset('imgs/waiter.jpg')}}) "class="container">
+           sasd
+        </div>
+       
+    
 
     
         
