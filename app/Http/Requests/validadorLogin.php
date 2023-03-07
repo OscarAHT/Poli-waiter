@@ -26,6 +26,7 @@ class validadorLogin extends FormRequest
         return [
             'usuario'=> 'required', 
             'contrasena'=>'required'
+            
         ];
     }
 }
