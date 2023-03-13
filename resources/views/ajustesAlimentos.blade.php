@@ -4,6 +4,38 @@
 @stop
 
 @section('content')
+@if (session()->has('creacion'))
+        {!! "<script>
+            Swal.fire({
+            icon: 'success',
+            title: 'Correcto!',
+            text: '¡Se ha agregado un nuevo alimento!',
+        
+})
+            </script>" !!}
+@endif
+@if (session()->has('actualizacion'))
+        {!! "<script>
+            Swal.fire({
+            icon: 'success',
+            title: 'Correcto!',
+            text: '¡Se ha actualizado un alimento!',
+        
+})
+            </script>" !!}
+@endif
+@if (session()->has('eliminacion'))
+        {!! "<script>
+            Swal.fire({
+            icon: 'success',
+            title: 'Correcto!',
+            text: '¡Se ha eliminado un alimento!',
+        
+})
+            </script>" !!}
+@endif
+
+
     <div class="container d-flex justify-content-center">
         <div class="row mt-2">
             <ul class="nav justify-content-center">
@@ -35,6 +67,7 @@
             <table class="table">
                 <thead>
                     <tr>
+                        <th scope="col">Id</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Precio de Venta</th>
                         <th scope="col">Tipo de Alimento</th>
@@ -43,26 +76,31 @@
                 <tbody>
                     @foreach ($consultaAlimentos as $Alimento)
                         <tr>
+                            <td>{{$Alimento->id}}</td>
                             <td>{{ $Alimento->descripcion }}</td>
                             <td>${{ $Alimento->precioVenta }}</td>
-                            @if ($Alimento->tipoAlimentoId == 1)
+                            @if ($Alimento->tipoAlimento == 1)
                                 <td class="" style="color:">Comida</td>
                             @endif
-                            @if ($Alimento->tipoAlimentoId == 2)
+                            @if ($Alimento->tipoAlimento == 2)
                                 <td class="" style="color:">Bebida</td>
                             @endif
-                            @if ($Alimento->tipoAlimentoId == 3)
+                            @if ($Alimento->tipoAlimento == 3)
                                 <td class="" style="color:">Snack</td>
                             @endif
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic outlined example">
-                                    <button type="button" class="btn btn-outline-warning">Actualizar</button>
+                                    
+                                    <a href="{{route('alimento.edit', $Alimento->id)}}" class="btn btn-outline-warning" type="button">Actualizar</a>
+                                    
 
-                                    <button type="button" class="btn btn-outline-danger">Eliminar</button>
+                                    <a href="{{route('alimento.destroy', $Alimento->id)}}" type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#eliminarAlimento{{$Alimento->id}}"> Eliminar Ingrediente </a>
+
                                 </div>
                             </td>
 
                         </tr>
+                        @include('Alimentos.eliminarAlimento')
                     @endforeach
 
                 </tbody>

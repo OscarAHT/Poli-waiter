@@ -1,15 +1,17 @@
 @extends('template')
 @section('title')
-    Agregar Alimento
+    Editar Alimento
 @stop
 
 @section('content')
     <div class="container d-flex justify-content-center">
         <div class="card text-center">
-            <div class="card-header">Agregar Nuevo Alimento</div>
+            <div class="card-header">Editar Alimento</div>
             <div class="card-body">
-                <form action="{{route('alimento.store')}}" method="post">   
+                <form action="{{route('alimento.update', $consultaAlimentos->id)}}" method="post">   
                     @csrf
+                    @method('put')
+                    <input type="hidden" name="tipo" value="{{$consultaAlimentos->tipoAlimento}}" />
                     <select class="form-select" aria-label="Default select example" name="tipo">
                         <option selected disabled>Tipo de alimento: </option>
                         <option value="1">Comida</option>
@@ -18,32 +20,23 @@
                     </select>
                     <div class="input-group mt-2">
                         <span class="input-group-text">Nombre:</span>
-                        <textarea class="form-control" aria-label="With textarea" name="descripcion"></textarea>
+                        <textarea class="form-control" aria-label="With textarea" name="descripcion">{{$consultaAlimentos->descripcion}}</textarea>
                     </div>
                     
-                    @foreach ($consultaIngredientes as $ingredientes)
-                        <div class="form-check">
-
-
-                            <input class="form-check-input" type="checkbox" value="{{ $ingredientes->id }}"
-                                id="flexCheckChecked">
-                            <label class="form-check-label" for="flexCheckChecked">
-                                {{ $ingredientes->descripcion }}
-                            </label>
-                        </div>
-                    @endforeach
+            
+            
                     <div class="input-group mt-2">
                         <span class="input-group-text">Imagen:</span>
-                        <textarea class="form-control" aria-label="With textarea" name="imagen"></textarea>
+                        <textarea class="form-control" aria-label="With textarea" name="imagen">{{$consultaAlimentos->imagen}}</textarea>
                     </div>
                     <div class="input-group mt-2 mb-2">
                       <span class="input-group-text">Precio de Venta:</span>
-                      <textarea class="form-control" aria-label="With textarea" name="precioVenta"></textarea>
+                      <textarea class="form-control" aria-label="With textarea" name="precioVenta">{{$consultaAlimentos->precioVenta}}</textarea>
                   </div>
 
                   <div class=" mt-2">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Agregar</button>
+                    <button type="submit" class="btn btn-primary">Editar</button>
                   </div>
                     
                 </form>
@@ -51,3 +44,5 @@
         </div>
     </div>
 @stop
+
+

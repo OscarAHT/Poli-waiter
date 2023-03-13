@@ -38,7 +38,15 @@ class controladorAlimentos extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::table('alimentos')->insert([
+            "descripcion" => $request->input('descripcion'),
+            "precioVenta" => $request->input('precioVenta'),
+            "imagen" => $request->input('imagen'),
+            "tipoAlimento" => $request->input('tipo')
+           
+        ]);
+
+        return redirect('/ajustes/alimentos')->with('creacion','confirmarNuevoIngrediente');
     }
 
     /**
@@ -49,7 +57,7 @@ class controladorAlimentos extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -60,7 +68,8 @@ class controladorAlimentos extends Controller
      */
     public function edit($id)
     {
-        //
+        $consultaAlimentos = DB::table('alimentos')->where('id',$id)->first();
+        return view('Alimentos.editarAlimento',compact('consultaAlimentos'));
     }
 
     /**
@@ -72,7 +81,14 @@ class controladorAlimentos extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        DB::table('alimentos')->where('id',$id)->update([
+            "descripcion" => $request->input('descripcion'),
+            "tipoAlimento" => $request->input('tipo'),
+            "imagen" => $request->input('imagen'),
+            "precioVenta" => $request->input('precioVenta'),
+        ]);
+
+        return redirect('/ajustes/alimentos')->with('actualizacion','confirmarIngrediente');
     }
 
     /**
@@ -83,6 +99,8 @@ class controladorAlimentos extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('alimentos')->where('id',$id)->delete();
+
+        return redirect('/ajustes/alimentos')->with('eliminacion','eliminarIngrediente');
     }
 }

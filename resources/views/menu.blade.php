@@ -30,16 +30,14 @@
                 <div class="card mt-3" style="width: 18rem;">
                     <div class="card-header container d-flex justify-content-center"
                         Style="background-color: rgb(226, 134, 93); color:white;">
-                        Hamburguesas
+                        Enchiladas
                     </div>
                     <div class="card-body">
-                        <img src="{{ asset('imgs/hamb.jpg') }}" class="" alt="">
+                        <img src="{{ asset('imgs/enchiladas.jpg') }}" class="" alt="">
                     </div>
                     <div class="card-footer ">
-                        <button class=" btn btn p-2 text-bg-#f8f9fa container d-flex justify-content-center"
-                            style="background-color: rgb(226, 134, 93); color:white;  ">
-                            Comprar
-                        </button>
+                        <a class=" btn btn p-2 text-bg-#f8f9fa container d-flex justify-content-center"
+                        href="{{route('comprarEnchiladas')}}" style="background-color: rgb(226, 134, 93); color:white;" type="button">Comprar</a>
                     </div>
                 </div>
             </div>

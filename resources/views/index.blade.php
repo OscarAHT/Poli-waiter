@@ -4,17 +4,6 @@
 @stop
 
 @section('content')
-{{-- Alerta Ingrediente_agregado --}}
-@if (session()->has('ingredienteAgregado'))
-        {!! "<script>
-            Swal.fire({
-            icon: 'success',
-            title: 'Correcto!',
-            text: '¡Se ha agregado el ingrediente!',
-        
-})
-            </script>" !!}
-@endif
 
 
 
@@ -79,8 +68,13 @@
           <div class="col mt-4">
             <h3>¿Sabías qué...?</h3>
 <h4>La desnutrición no solo refleja problemas de hambruna, sino también malos hábitos nutricionales, los cuales pueden afectar a los estudiantes al consumir alimentos “chatarra” en la escuela, en mayor medida cuando no han desayunado antes de ir a la escuela. </h4>          </div>
+
+  
+        <div  style="background-image:url({{asset('imgs/waiter.jpg')}}) "class="container">
+           sasd
         </div>
-    </div>
+       
+    
 
     
         
